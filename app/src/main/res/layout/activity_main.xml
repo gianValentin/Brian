@@ -12,13 +12,12 @@
         style="@android:style/Widget.DeviceDefault.Light.TextView.SpinnerItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginLeft="92dp"
         android:layout_marginTop="28dp"
         android:text="@string/comenzamos"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#00BCD4"
+        android:textColor="@color/colorLetter01"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,33 +25,46 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginLeft="96dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/nombre"
         android:inputType="textPersonName"
-        android:shadowColor="#FFFFFF"
-        android:textColor="#ED5181"
-        android:textColorLink="#ED5181"
+        android:shadowColor="@color/colorSun"
+        android:textColor="@color/colorLetter01"
+        android:textColorLink="@color/colorSun"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginLeft="96dp"
         android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/contrase_a"
         android:inputType="textPassword"
-        android:textColor="#ED5181"
-        android:textColorLink="#ED5181"
+        android:textColor="@color/colorLetter01"
+        android:textColorLink="@color/colorSun"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="153dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/entrar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/colorSun"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        android:textColor="@color/colorLetter01"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

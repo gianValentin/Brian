@@ -5,4 +5,6 @@
     <string name="comenzamos">COMENZAMOS</string>
     <string name="nombre">Nombre</string>
     <string name="contrase_a">Contraseña</string>
+    <string name="btnIngresar">Button</string>
+    <string name="entrar">Entrar</string>
 </resources>
