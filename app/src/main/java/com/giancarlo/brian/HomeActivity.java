@@ -1,9 +1,11 @@
 package com.giancarlo.brian;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -11,6 +13,7 @@ import android.widget.Toast;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageClickListener;
 import com.synnapps.carouselview.ImageListener;
+import com.synnapps.carouselview.ViewListener;
 
 public class HomeActivity extends AppCompatActivity{
 
@@ -23,19 +26,21 @@ public class HomeActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        getSupportActionBar().hide();
 
         Bundle extra = getIntent().getExtras();
-        String fecha = extra.getString("fecha");
-        setTitle(fecha);
+        String time = extra.getString("fecha");
+        setTitle(time);
 
         //txtFecha = (TextView)findViewById(R.id.textView_fecha);
         //txtFecha.setText(fecha);
+        final TextView txtParrafo = findViewById(R.id.tvParrafo);
 
         mp = MediaPlayer.create(this,R.raw.afirmkick);
         mp.start();
 
         //Iniciar Carrusel
-        CarouselView carousel = (CarouselView)findViewById(R.id.cvHome);
+        CarouselView carousel = findViewById(R.id.cvHome);
         carousel.setPageCount(img.length);
         carousel.setImageListener(new ImageListener() {
             @Override
@@ -47,6 +52,22 @@ public class HomeActivity extends AppCompatActivity{
             @Override
             public void onClick(int position) {
                 Toast.makeText(HomeActivity.this, nameImg[position], Toast.LENGTH_SHORT).show();
+            }
+        });
+        carousel.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                txtParrafo.setText(nameImg[position]);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                txtParrafo.setText(nameImg[position]);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
     }

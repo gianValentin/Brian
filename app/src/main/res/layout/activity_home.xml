@@ -13,8 +13,24 @@
         app:fillColor="@color/colorSun"
         app:pageColor="#00000000"
         app:radius="6dp"
-        app:slideInterval="3000"
+        app:slideInterval="4000"
         app:strokeColor="#FF777777"
         app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/tvParrafo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvHome"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="176dp"
+        android:layout_marginLeft="176dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:text="" />
 
 </RelativeLayout>
