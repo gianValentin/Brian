@@ -18,7 +18,7 @@ import com.synnapps.carouselview.ViewListener;
 public class HomeActivity extends AppCompatActivity{
 
     private int[] img = new int[]{R.drawable.carrusel05,R.drawable.carrusel06,R.drawable.carrusel07};
-    private String[] nameImg = new String[]{"carrusel05","carrusel06","carrusel07"};
+    private String[] nameImg = new String[]{"Datos Datos Datos Datos Datos Datos Datos Datos","carrusel06","carrusel07"};
     MediaPlayer mp;
     TextView txtFecha;
 
@@ -62,7 +62,7 @@ public class HomeActivity extends AppCompatActivity{
 
             @Override
             public void onPageSelected(int position) {
-                txtParrafo.setText(nameImg[position]);
+                //txtParrafo.setText(nameImg[position]);
             }
 
             @Override
