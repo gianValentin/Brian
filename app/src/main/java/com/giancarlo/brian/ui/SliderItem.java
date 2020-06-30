@@ -1,4 +1,4 @@
-package com.giancarlo.brian;
+package com.giancarlo.brian.ui;
 
 public class SliderItem {
 

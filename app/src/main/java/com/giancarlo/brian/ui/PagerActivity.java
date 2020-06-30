@@ -1,4 +1,4 @@
-package com.giancarlo.brian;
+package com.giancarlo.brian.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
+
+import com.giancarlo.brian.R;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.giancarlo.brian;
+package com.giancarlo.brian.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.giancarlo.brian.R;
+import com.giancarlo.brian.db.entity.UserEntity;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -42,12 +45,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String user = validar(name,password);
 
             if(user.equals("brian")){
-                Intent HomeItemt = new Intent(this,HomeActivity.class);
+                Intent HomeItemt = new Intent(this, HomeActivity.class);
                 HomeItemt.putExtra("fecha",new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date()));
                 startActivity(HomeItemt);
                 finish();
             }else if(user.equals("giancarlo")){
-                Intent PegerItemt = new Intent(this,PagerActivity.class);
+                Intent PegerItemt = new Intent(this, PagerActivity.class);
                 startActivity(PegerItemt);
                 finish();
             }else{

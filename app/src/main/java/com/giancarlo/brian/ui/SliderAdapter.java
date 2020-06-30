@@ -1,6 +1,5 @@
-package com.giancarlo.brian;
+package com.giancarlo.brian.ui;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.giancarlo.brian.R;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;
