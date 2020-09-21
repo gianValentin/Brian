@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,17 +20,18 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    EditText txtNombre,txtContraseña;
+    EditText txtNombre,txtContrase;
     Button btnIngresar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+        if(getSupportActionBar() != null)
+            getSupportActionBar().hide();
 
-        txtNombre = (EditText)findViewById(R.id.editText_nombre);
-        txtContraseña = (EditText)findViewById(R.id.editText_contraseña);
+        txtNombre = findViewById(R.id.editText_nombre);
+        txtContrase = findViewById(R.id.editText_contraseña);
         btnIngresar = findViewById(R.id.btnIngresar);
 
         btnIngresar.setOnClickListener(this);
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         String name = txtNombre.getText().toString();
-        String password = txtContraseña.getText().toString();
+        String password = txtContrase.getText().toString();
 
         if(!name.isEmpty() && !password.isEmpty()){
             String user = validar(name,password);
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }else{
                 txtNombre.setError("Nombre o Contraseña Erronea!");
                 txtNombre.setText("");
-                txtContraseña.setText("");
+                txtContrase.setText("");
             }
 
         }else{
@@ -77,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listUser.add(new UserEntity("giancarlo","12345"));
 
         for(UserEntity userEntity: listUser) {
-            if (userEntity.getName().equals(name) && userEntity.getPassword().equals(password) && fecha.equals("2020-06-14")) {
+            if (userEntity.getName().equals(name) && userEntity.getPassword().equals(password) && fecha.equals("2020-09-16")) {
                 acceso = userEntity.getName();
             }
         }

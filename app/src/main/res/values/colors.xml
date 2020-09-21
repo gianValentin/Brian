@@ -2,7 +2,8 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#3700B3</color>
+    <color name="colorAccent">#00BCD4</color>
     <color name="colorSun">#3700B3</color>
     <color name="colorLetter01">#00BCD4</color>
+    <color name="colorPink">#FFB5C0</color>
 </resources>
